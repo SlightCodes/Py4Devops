@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 
 """
 commandline tool using argparse
@@ -43,9 +43,10 @@ if __name__ == '__main__':
                                default='Ahoy there')
 
     args = parser.parse_args()
+
     if args.func == 'sailors':
         greet(args.greeting, args.name)
-    elif args.command == 'list':
+    elif args.func == 'ships':
         list_ships()
     else:
         sail()
